@@ -28,6 +28,7 @@ function Widget ( container ) {
 
     this.barElement = null;
     this.fullscreenElement = null;
+    this.cardboardElement = null;
     this.videoElement = null;
     this.settingElement = null;
 
@@ -225,6 +226,13 @@ Widget.prototype = Object.assign( Object.create( THREE.EventDispatcher.prototype
 
             break;
 
+        case 'cardboard':
+
+            element = this.createCardboardButton();
+            this.cardboardElement = element;
+
+            break;
+
         case 'setting':
 
             element = this.createSettingButton();
@@ -292,6 +300,76 @@ Widget.prototype = Object.assign( Object.create( THREE.EventDispatcher.prototype
      * @memberOf Widget
      * @instance
      */
+    createCardboardButton: function () {
+
+        let scope = this, cardboard;
+
+        function onTap ( event ) {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            if ( this.activated ) {
+                this.deactivate();
+            } else {
+                this.activate();
+            }
+
+            var clickEvent = new Event('ontouchstart' in window ? 'touchend' : 'click');
+            scope.fullscreenElement.dispatchEvent(clickEvent);
+        }
+
+        cardboard = this.createCustomItem( { 
+
+            style: { 
+
+                backgroundImage: 'url("' + DataImage.Cardboard + '")',
+                webkitTransition: this.DEFAULT_TRANSITION,
+                transition: this.DEFAULT_TRANSITION
+
+            },
+
+            onTap: onTap
+
+        } );
+
+        cardboard.handler = function ( method, data ) {
+            scope.dispatchEvent( { 
+                type: 'panolens-viewer-handler', 
+                method: method, 
+                data: data 
+            } ); 
+        };
+
+        cardboard.activate = function () {
+
+            this.handler( 'enableEffect', MODES.CARDBOARD );
+            this.handler( 'enableControl', CONTROLS.DEVICEORIENTATION );
+            document.querySelector('.panolens-container').classList.add('cardboard_mode');
+            this.activated = true;
+
+        };
+
+        cardboard.deactivate = function () {
+
+            this.handler( 'disableEffect' );
+            this.handler( 'enableControl', CONTROLS.ORBIT );
+            document.querySelector('.panolens-container').classList.remove('cardboard_mode');
+            this.activated = false;
+			
+        };
+
+        cardboard.activated = false;
+
+        return cardboard;
+
+    },
+
+    /**
+     * Create Setting button to toggle menu
+     * @memberOf Widget
+     * @instance
+     */
     createSettingButton: function () {
 
         let scope = this, item;
@@ -304,7 +382,7 @@ Widget.prototype = Object.assign( Object.create( THREE.EventDispatcher.prototype
             scope.mainMenu.toggle();
 
             if ( this.activated ) {
-	
+    
                 this.deactivate();
 
             } else {
@@ -346,7 +424,7 @@ Widget.prototype = Object.assign( Object.create( THREE.EventDispatcher.prototype
             if ( scope.mainMenu && scope.mainMenu.visible ) {
 
                 scope.mainMenu.hide();
-				
+                
             }
 
             if ( scope.activeSubMenu && scope.activeSubMenu.visible ) {
@@ -361,7 +439,7 @@ Widget.prototype = Object.assign( Object.create( THREE.EventDispatcher.prototype
                 scope.mainMenu.unslideAll();
 
             }
-			
+            
         };
 
         item.activated = false;
@@ -404,7 +482,6 @@ Widget.prototype = Object.assign( Object.create( THREE.EventDispatcher.prototype
 
                 if ( container.requestFullscreen ) { container.requestFullscreen(); }
                 if ( container.msRequestFullscreen ) { container.msRequestFullscreen(); }
-                if ( container.mozRequestFullScreen ) { container.mozRequestFullScreen(); }
                 if ( container.webkitRequestFullscreen ) { container.webkitRequestFullscreen( Element.ALLOW_KEYBOARD_INPUT ); }
               
                 isFullscreen = true;
@@ -413,7 +490,6 @@ Widget.prototype = Object.assign( Object.create( THREE.EventDispatcher.prototype
 
                 if ( document.exitFullscreen ) { document.exitFullscreen(); }
                 if ( document.msExitFullscreen ) { document.msExitFullscreen(); }
-                if ( document.mozCancelFullScreen ) { document.mozCancelFullScreen(); }
                 if ( document.webkitExitFullscreen ) { document.webkitExitFullscreen( ); }
 
                 isFullscreen = false;

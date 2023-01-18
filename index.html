@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>panorama - test</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+        <link href="main.css" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <script src="asset/three.min.js"></script>
+        <script src="build/panolens.js"></script>
+
+        <script>
+
+            const url = 'asset/data.json'
+
+            const create = data => {
+
+                // create panorama
+                const panorama = new PANOLENS.ImagePanorama( data.pano );
+                const viewer = new PANOLENS.Viewer({ 
+                    output: 'console',
+                    controlButtons : ['fullscreen','cardboard']
+                });
+                viewer.add( panorama );
+                viewer.onWindowResize();
+
+                // draw infopoints
+                data.points.forEach(p => {
+                    // adding point
+                    infospot = new PANOLENS.Infospot( p.size, p.img );
+                    infospot.position.set( p.x, p.y, p.z );
+                    // create overlay
+                    let div = document.createElement('div')
+                    div.classList.add('infopoint_container');
+                    let html = p.title ? '<h2>' + p.title + '</h2>' : ''
+                    html += '<div>' + p.content + '</div>' 
+                    div.innerHTML = html;
+                    // add infopoint
+                    infospot.addHoverElement( div, p.offset );
+                    panorama.add( infospot );
+                })
+            
+            }
+
+
+            const data = fetch(url)
+                .then(response => response.json())
+                .then(data => create(data))
+
+            /*
+            // fetch file and convert to data-url
+            const toDataURL = url => fetch(url)
+                .then(response => response.blob())
+                .then(blob => new Promise((resolve, reject) => {
+                    const reader = new FileReader()
+                    reader.onloadend = () => resolve(reader.result)
+                    reader.onerror = reject
+                    reader.readAsDataURL(blob)
+            }))
+            */
+
+        </script>
+
+    </body>
+</html>

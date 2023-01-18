@@ -262,6 +262,7 @@ Infospot.prototype = Object.assign( Object.create( THREE.Sprite.prototype ), {
      */
     onHoverEnd: function () {
 
+
         if ( !this.getContainer() ) { return; }
 
         const { scaleDownAnimation, scaleUpAnimation, element } = this;
@@ -276,7 +277,9 @@ Infospot.prototype = Object.assign( Object.create( THREE.Sprite.prototype ), {
 
         }
 
-        if ( element && !this.element.locked ) {
+        //if ( element && !this.element.locked ) {
+        if ( element ) {
+
 
             const { left, right, style } = element;
 
