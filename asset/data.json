@@ -1,25 +1,154 @@
-{
-  "pano": "panos/05_Ortler_Spherea3D.jpg",
-  "points": [
-    {
-      "img": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kTtIw1AUhv+mikUqHewg4pChOlkQXzhqFYpQIdQKrTqY3PQFTRqSFBdHwbXg4GOx6uDirKuDqyAIPkBcXZwUXaTEc5NCixhPuOTjv+f/ufdcQGhUmGZ1jQGabpvpZELM5lbFnlcEEKEvhCmZWcacJKXgW1/31E11F+dZ/n1/Vp+atxgQEIlnmWHaxBvE05u2wXmfOMpKskp8Tjxq0gGJH7muePzGueiywDOjZiY9TxwlFosdrHQwK5ka8SRxTNV0yheyHquctzhrlRprnZPfMJzXV5a5TmsISSxiCRJEKKihjApsxOmvk2IhTfsJH/+g65fIpZCrDEaOBVShQXb94G/we7ZWYWLcSwongO4Xx/kYBnp2gWbdcb6PHad5AgSfgSu97a82gJlP0uttLXYERLaBi+u2puwBlzvAwJMhm7IrBWkJhQLwfkbPlAP6b4HeNW9urX2cPgAZmlXqBjg4BEaKlL3uc+9Q59z+7WnN7wdXTnKcMSYsdQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAN1wAADdcBQiibeAAAAAd0SU1FB+cBDw8QKNa9ReoAAAYCSURBVHja7Z1NaFRXGIafe5vdJE5X+aGrWAuJlZYyirhJqXQTCpXU0o0NurFOu6q7CsGFBNKdrtJRFzXE7mqFQumu0kCRYi7F1mqg2qxKflZOktmpcXHOTU+Ge+cnc+69Z2a+F4KaGcF8j+/3fmfuved4tJHKpUIOGNF/zAGjMW+tAI/C3+eLwVK7/Iye48UvAIc1hBxwUP8a/ttzMX99W0MBeAGsA0v6ewGw6Cokz1EABV38XqBPF74WgHoKAb0AtoBNDSlwDZDnAIh+4FMN4ogG0NtC8ZuBtKkBrQILwEK+GNzuOiDaDWMaxJvAYEoQ6sHZAJY1nJtZuMbLCMQkcBQYyBBCLTgbwBPg57TBeALCLTBeCjD6gSJwuk1AxIH5E7icdMZ4CYM4B5wEhoB+2lvPgRXgAXAtKTBeQjCGgRngvQ4AEQXmMTCXLwYzTgPRWTEOXAT2t2F7aqaNPQV+AaZsZotnEUaYFWeAYbpDz4C7NrPFswjjC+DzDmxRjbSw+8C0DSieBRidnBep54pnAcbXwAcdnBfN5Mp/wGwrUDyB4RYUT2C4BcXfY4CfERg1/5O/BpwulwoTiQIxpqmiwKgL5QAw1SwUvwkYOT1JdeNouxe9ArwNnC+XCiNJOGS/Hm8FRnNQjgHTVoHoEL/YRStwm+oBjpdLhQtWgBghPi613bNebTTkG3HIkIS4tZD/rCUg2h0nJTes5cmhei7xG5iqzkktrWmo3tRVyyEDqMuu4g67LnkLdbdNbG+Lc8eHwHUXs+PL+X/49reN2Nc/KeS4fnbEVSjbwB/AqagLW34Nd0xKkCcW8K/HucSPccdR1G07omS0DxiPyhJf3OGWS/wYeuKOdFwyVhOIXnd8JO5IzSXD1esSP4Lau1Kr7FziV4X5EdSzGaJ01AeMmeHeY7zYi3pGw/l2dWXyDa5MdkzbGtR1X6puWX36BVG66jW7kh/3gijVtlXY1bJ0fhxsl+mqzT86iWpb/eVSYSRfDJZ8cYczLjlstizJD0dyxDdsI4vB7OSH9Q+BmDskiNLXTv39dgv0DtVOsPvSrtxqW77Uwc0wkfxwI0dGfTPhRZnniLQsF1uWSICIBIgAEe0VSAV9tUqUqSrAIx+1D2FF6pG5toGKtCxpWaIaLWvJzxeDbf7f11aUHYyH+WKw07IkRxzID3PsNbfmFmXUrkwgW6gdnkXZaBNYNIFsCpBMtWMIH0CC3Y1ANx2yyzaibNxRDURyJOP8iHLIgrSt1NvVvUiH6BxZlbaVertaDPOj2iEAa8B3UqfUtArcNL+xC0i+GDxHnZ8hbSuddvV3vhisxwKJoyZKRGtRdY4CsoE6L0Nckqw7ftdDVG0gOtyfiEsSd8e8Geah4jaf8YB3dMDLXY323fEjcDYKSOQVQ3FJNu6IBWJkyffAbamhNa0Dc1HZUReIdslj4JrU0ZpWgFKcO+o5JFyXPBCXWHPHrep1R1NADKqXZQxuOcjvAFfrvbGh0xHKpUIPcEJniqh5/QWcyBeD5XpvbOi+rHwxeIY6AGtGatu0loFLjcBoGIjWUz0hSJ40lxs39CcfWAViTF3TAqVhGN/Um6pacUg4dd2XkG84xGfrTVUtATGg3AXOC5RYGD8BF5qF0fCUVWPyel+7RT7v2g3jq0ZD3BoQgWIfRstADCjHdAub6FIY60AJuNEKDCtANJTwvKWpLoQSTlOze8mMRIAYUA6gTlS40CUwlvXPescGDKtANBQPdbzPcb1e6dRcqejF3iXg32bWGakC6ZJcsZYXqQExWtgQcAh19tJEB4C4CtwCVmy1qNSARGTLx6jTANqtjVVQV/jmbGZFZkCMbNmHOqJhvE3AhCDmUbfsrNnMikyBtBmYTEBkAiQCzCDq9NBTqG1qRzKEEAC/Aj+gbvBIFUSmQCIyZkDDGUPtX5sGnBDCov66B2wknRHOA6lyTR9qU+E+1HF9Bf01SmtbEYZPuVZ08QPgIepxgE1gKws3OA2kDqAc6lJBvwGlFiBzd4qKLn4F9Ty4UwDaBkgNSOH+kLX2ijQ3Qth2tfhReglOgB0CBnTnZwAAAABJRU5ErkJggg==",
-      "x": 2636.03,
-      "y": -678.18,
-      "z": -4183.14,
-      "title": "Ortler",
-      "content": "<p>Das Gipfelkreuz am Ortler!</p>",
-      "size": 300,
-      "offset": 100
-    },
-    {
-      "img": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kTtIw1AUhv+mikUqHewg4pChOlkQXzhqFYpQIdQKrTqY3PQFTRqSFBdHwbXg4GOx6uDirKuDqyAIPkBcXZwUXaTEc5NCixhPuOTjv+f/ufdcQGhUmGZ1jQGabpvpZELM5lbFnlcEEKEvhCmZWcacJKXgW1/31E11F+dZ/n1/Vp+atxgQEIlnmWHaxBvE05u2wXmfOMpKskp8Tjxq0gGJH7muePzGueiywDOjZiY9TxwlFosdrHQwK5ka8SRxTNV0yheyHquctzhrlRprnZPfMJzXV5a5TmsISSxiCRJEKKihjApsxOmvk2IhTfsJH/+g65fIpZCrDEaOBVShQXb94G/we7ZWYWLcSwongO4Xx/kYBnp2gWbdcb6PHad5AgSfgSu97a82gJlP0uttLXYERLaBi+u2puwBlzvAwJMhm7IrBWkJhQLwfkbPlAP6b4HeNW9urX2cPgAZmlXqBjg4BEaKlL3uc+9Q59z+7WnN7wdXTnKcMSYsdQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAN1wAADdcBQiibeAAAAAd0SU1FB+cBDw8QKNa9ReoAAAYCSURBVHja7Z1NaFRXGIafe5vdJE5X+aGrWAuJlZYyirhJqXQTCpXU0o0NurFOu6q7CsGFBNKdrtJRFzXE7mqFQumu0kCRYi7F1mqg2qxKflZOktmpcXHOTU+Ge+cnc+69Z2a+F4KaGcF8j+/3fmfuved4tJHKpUIOGNF/zAGjMW+tAI/C3+eLwVK7/Iye48UvAIc1hBxwUP8a/ttzMX99W0MBeAGsA0v6ewGw6Cokz1EABV38XqBPF74WgHoKAb0AtoBNDSlwDZDnAIh+4FMN4ogG0NtC8ZuBtKkBrQILwEK+GNzuOiDaDWMaxJvAYEoQ6sHZAJY1nJtZuMbLCMQkcBQYyBBCLTgbwBPg57TBeALCLTBeCjD6gSJwuk1AxIH5E7icdMZ4CYM4B5wEhoB+2lvPgRXgAXAtKTBeQjCGgRngvQ4AEQXmMTCXLwYzTgPRWTEOXAT2t2F7aqaNPQV+AaZsZotnEUaYFWeAYbpDz4C7NrPFswjjC+DzDmxRjbSw+8C0DSieBRidnBep54pnAcbXwAcdnBfN5Mp/wGwrUDyB4RYUT2C4BcXfY4CfERg1/5O/BpwulwoTiQIxpqmiwKgL5QAw1SwUvwkYOT1JdeNouxe9ArwNnC+XCiNJOGS/Hm8FRnNQjgHTVoHoEL/YRStwm+oBjpdLhQtWgBghPi613bNebTTkG3HIkIS4tZD/rCUg2h0nJTes5cmhei7xG5iqzkktrWmo3tRVyyEDqMuu4g67LnkLdbdNbG+Lc8eHwHUXs+PL+X/49reN2Nc/KeS4fnbEVSjbwB/AqagLW34Nd0xKkCcW8K/HucSPccdR1G07omS0DxiPyhJf3OGWS/wYeuKOdFwyVhOIXnd8JO5IzSXD1esSP4Lau1Kr7FziV4X5EdSzGaJ01AeMmeHeY7zYi3pGw/l2dWXyDa5MdkzbGtR1X6puWX36BVG66jW7kh/3gijVtlXY1bJ0fhxsl+mqzT86iWpb/eVSYSRfDJZ8cYczLjlstizJD0dyxDdsI4vB7OSH9Q+BmDskiNLXTv39dgv0DtVOsPvSrtxqW77Uwc0wkfxwI0dGfTPhRZnniLQsF1uWSICIBIgAEe0VSAV9tUqUqSrAIx+1D2FF6pG5toGKtCxpWaIaLWvJzxeDbf7f11aUHYyH+WKw07IkRxzID3PsNbfmFmXUrkwgW6gdnkXZaBNYNIFsCpBMtWMIH0CC3Y1ANx2yyzaibNxRDURyJOP8iHLIgrSt1NvVvUiH6BxZlbaVertaDPOj2iEAa8B3UqfUtArcNL+xC0i+GDxHnZ8hbSuddvV3vhisxwKJoyZKRGtRdY4CsoE6L0Nckqw7ftdDVG0gOtyfiEsSd8e8Geah4jaf8YB3dMDLXY323fEjcDYKSOQVQ3FJNu6IBWJkyffAbamhNa0Dc1HZUReIdslj4JrU0ZpWgFKcO+o5JFyXPBCXWHPHrep1R1NADKqXZQxuOcjvAFfrvbGh0xHKpUIPcEJniqh5/QWcyBeD5XpvbOi+rHwxeIY6AGtGatu0loFLjcBoGIjWUz0hSJ40lxs39CcfWAViTF3TAqVhGN/Um6pacUg4dd2XkG84xGfrTVUtATGg3AXOC5RYGD8BF5qF0fCUVWPyel+7RT7v2g3jq0ZD3BoQgWIfRstADCjHdAub6FIY60AJuNEKDCtANJTwvKWpLoQSTlOze8mMRIAYUA6gTlS40CUwlvXPescGDKtANBQPdbzPcb1e6dRcqejF3iXg32bWGakC6ZJcsZYXqQExWtgQcAh19tJEB4C4CtwCVmy1qNSARGTLx6jTANqtjVVQV/jmbGZFZkCMbNmHOqJhvE3AhCDmUbfsrNnMikyBtBmYTEBkAiQCzCDq9NBTqG1qRzKEEAC/Aj+gbvBIFUSmQCIyZkDDGUPtX5sGnBDCov66B2wknRHOA6lyTR9qU+E+1HF9Bf01SmtbEYZPuVZ08QPgIepxgE1gKws3OA2kDqAc6lJBvwGlFiBzd4qKLn4F9Ty4UwDaBkgNSOH+kLX2ijQ3Qth2tfhReglOgB0CBnTnZwAAAABJRU5ErkJggg==",
-      "x": 652.36,
-      "y": -593.28,
-      "z": -4912.43,
-      "title": "Berg",
-      "content": "<p>Ein Nachbarberg</p>",
-      "size": 300,
-      "offset": 100
+[
+  {
+    "pano": "panos/01_1904-596_Spherea3D.jpg",
+    "points": [
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 2636.03, -678.18, -4183.14 ],
+        "title": "Ortler",
+        "content": "<p>Das Gipfelkreuz am Ortler!</p>",
+        "size": 300,
+        "offset": 100
+      }
+    ],
+    "links" : {
+      "back" :  {},
+      "forward" : {
+        "img" : "asset/icon/arrow-right.png",
+        "target" : 1,
+        "coords" : [-1081.44, -4125.23, -2635.14],
+        "size" : 400
+      }
     }
-  ]
-}
+  },
+  {
+    "pano": "panos/02_1904-603_Spherea3D.jpg",
+    "points": [
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 2636.03, -678.18, -4183.14 ],
+        "title": "Ortler",
+        "content": "<p>Das Gipfelkreuz am Ortler!</p>",
+        "size": 300,
+        "offset": 100
+      }
+    ],
+    "links" : {
+      "back" :  {
+        "img" : "asset/icon/arrow-left.png",
+        "target" : 0,
+        "coords" : [990.62, -4125.23, -2635.14],
+        "size" : 400
+      },
+      "forward" : {
+        "img" : "asset/icon/arrow-right.png",
+        "target" : 2,
+        "coords" : [-1081.44, -4125.23, -2635.14],
+        "size" : 400
+      }
+    }
+  },
+  {
+    "pano": "panos/03_1904-604_Spherea3D.jpg",
+    "points": [
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 2636.03, -678.18, -4183.14 ],
+        "title": "Ortler",
+        "content": "<p>Das Gipfelkreuz am Ortler!</p>",
+        "size": 300,
+        "offset": 100
+      }
+    ],
+    "links" : {
+      "back" :  {
+        "img" : "asset/icon/arrow-left.png",
+        "target" : 1,
+        "coords" : [990.62, -4125.23, -2635.14],
+        "size" : 400
+      },
+      "forward" : {
+        "img" : "asset/icon/arrow-right.png",
+        "target" : 3,
+        "coords" : [-1081.44, -4125.23, -2635.14],
+        "size" : 400
+      }
+    }
+  },
+  {
+    "pano": "panos/04_1904-606_Spherea3D.jpg",
+    "points": [
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 2636.03, -678.18, -4183.14 ],
+        "title": "Ortler",
+        "content": "<p>Das Gipfelkreuz am Ortler!</p>",
+        "size": 300,
+        "offset": 100
+      }
+    ],
+    "links" : {
+      "back" :  {
+        "img" : "asset/icon/arrow-left.png",
+        "target" : 2,
+        "coords" : [990.62, -4125.23, -2635.14],
+        "size" : 400
+      },
+      "forward" : {
+        "img" : "asset/icon/arrow-right.png",
+        "target" : 4,
+        "coords" : [-1081.44, -4125.23, -2635.14],
+        "size" : 400
+      }
+    }
+  },
+  {
+    "pano": "panos/05_Ortler_Spherea3D.jpg",
+    "points": [
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 2636.03, -678.18, -4183.14 ],
+        "title": "Ortler",
+        "content": "<p>Das Gipfelkreuz am Ortler!</p>",
+        "size": 300,
+        "offset": 100
+      }
+    ],
+    "links" : {
+      "back" : {
+        "img" : "asset/icon/arrow-left.png",
+        "target" : 3,
+        "coords" : [990.62, -4125.23, -2635.14],
+        "size" : 400
+      },
+       "forward" : {
+        "img" : "asset/icon/arrow-right.png",
+        "target" : 5,
+        "coords" : [-1081.44, -4125.23, -2635.14],
+        "size" : 400
+      }
+    }
+  },
+  {
+    "pano": "panos/06_Sulden_Spherea3D.jpg",
+    "points": [
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 2636.03, -678.18, -4183.14 ],
+        "title": "Ortler",
+        "content": "<p>Das Gipfelkreuz am Ortler!</p>",
+        "size": 300,
+        "offset": 100
+      }
+    ],
+    "links" : {
+      "back" :  {
+        "img" : "asset/icon/arrow-left.png",
+        "target" : 4,
+        "coords" : [990.62, -4125.23, -2635.14],
+        "size" : 400
+      },
+      "forward" : { }
+    }
+  }
+]

@@ -17,39 +17,75 @@
 
             const url = 'asset/data.json'
 
-            const create = data => {
+            const create = panoramas => {
 
-                // create panorama
-                const panorama = new PANOLENS.ImagePanorama( data.pano );
-                const viewer = new PANOLENS.Viewer({ 
+                // viewer
+                const viewer = new PANOLENS.Viewer({
                     output: 'console',
                     controlButtons : ['fullscreen','cardboard']
                 });
-                viewer.add( panorama );
-                viewer.onWindowResize();
 
-                // draw infopoints
-                data.points.forEach(p => {
-                    // adding point
-                    infospot = new PANOLENS.Infospot( p.size, p.img );
-                    infospot.position.set( p.x, p.y, p.z );
-                    // create overlay
-                    let div = document.createElement('div')
-                    div.classList.add('infopoint_container');
-                    let html = p.title ? '<h2>' + p.title + '</h2>' : ''
-                    html += '<div>' + p.content + '</div>' 
-                    div.innerHTML = html;
-                    // add infopoint
-                    infospot.addHoverElement( div, p.offset );
-                    panorama.add( infospot );
-                })
-            
+                // image panoramas
+                let image_panoramas = [];
+
+                panoramas.forEach((data,index) => {
+
+                    // create panorama
+                    image_panoramas[index] = new PANOLENS.ImagePanorama( data.pano );
+                    viewer.add( image_panoramas[index] );
+
+                    // draw infopoints
+                    data.points.forEach(p => {
+                        // adding point
+                        infospot = new PANOLENS.Infospot( p.size, p.img );
+                        infospot.position.set( p.coords[0], p.coords[1], p.coords[2] );
+                        // create overlay
+                        let div = document.createElement('div')
+                        div.classList.add('infopoint_container');
+                        let html = p.title ? '<h2>' + p.title + '</h2>' : ''
+                        html += '<div>' + p.content + '</div>'
+                        div.innerHTML = html;
+                        // add infopoint
+                        infospot.addHoverElement( div, p.offset );
+                        image_panoramas[index].add( infospot );
+                    });
+                });
+
+                // link parnoramas
+                panoramas.forEach((data,index) => {
+
+                    // forward
+                    if (data.links && data.links.forward && data.links.forward.coords) {
+                        const f = data.links.forward;
+                        image_panoramas[index].link(
+                            image_panoramas[f.target],
+                            new THREE.Vector3( f.coords[0], f.coords[1], f.coords[2] ),
+                            f.size,
+                            f.img
+                        );
+                    }
+
+                    // back
+                    if (data.links && data.links.back && data.links.back.coords) {
+                        const b = data.links.back;
+                        image_panoramas[index].link(
+                            image_panoramas[b.target],
+                            new THREE.Vector3( b.coords[0], b.coords[1], b.coords[2] ),
+                            b.size,
+                            b.img
+                        );
+                    }
+
+                });
+
+                // resize event to show panorama
+                viewer.onWindowResize();
             }
 
 
             const data = fetch(url)
                 .then(response => response.json())
-                .then(data => create(data))
+                .then(panoramas => create(panoramas));
 
             /*
             // fetch file and convert to data-url
