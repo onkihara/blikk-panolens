@@ -4,9 +4,33 @@
     "points": [
       {
         "img": "asset/icon/info.png",
-        "coords" : [ 2636.03, -678.18, -4183.14 ],
+        "coords" : [ 4943.52, 625.42, -257.19 ],
         "title": "Ortler",
-        "content": "<p>Das Gipfelkreuz am Ortler!</p>",
+        "content": "<p>POI1 Der Gletscher zeigt seine Zunge </p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 2218.09, 685.85, -4417.55 ],
+        "title": "Ortler",
+        "content": "<p>POI2 Hängende Gletscher</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ -2229.39, -292.47, -4455.13 ],
+        "title": "Ortler",
+        "content": "<p>POI3 Landmarke Ufermoräne</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 1323.06, -272.50, -4803.70 ],
+        "title": "Ortler",
+        "content": "<p>POI4 Gletschertische und Sandkegel</p>",
         "size": 300,
         "offset": 100
       }
@@ -26,9 +50,25 @@
     "points": [
       {
         "img": "asset/icon/info.png",
-        "coords" : [ 2636.03, -678.18, -4183.14 ],
+        "coords" : [ 3682.26, -905.13, -3250.49 ],
         "title": "Ortler",
-        "content": "<p>Das Gipfelkreuz am Ortler!</p>",
+        "content": "<p>POI1 Sich grün und blau ärgern</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ -1101.67, -58.13, -4871.73 ],
+        "title": "Ortler",
+        "content": "<p>POI2 Eisspaltereien</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [-4292.00, 1071.78, -2312.70 ],
+        "title": "Ortler",
+        "content": "<p>POI3 Sicher ist sicher</p>",
         "size": 300,
         "offset": 100
       }
@@ -53,9 +93,33 @@
     "points": [
       {
         "img": "asset/icon/info.png",
-        "coords" : [ 2636.03, -678.18, -4183.14 ],
+        "coords" : [ 37.35, 618.17, -4955.90 ],
         "title": "Ortler",
-        "content": "<p>Das Gipfelkreuz am Ortler!</p>",
+        "content": "<p>POI1 Geschliffen und geschrammt</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 1370.89, -240.25, -4792.20 ],
+        "title": "Ortler",
+        "content": "<p>POI2 Gletscherbach und Gletschermilch</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 3867.24, -2550.14, -1864.57 ],
+        "title": "Ortler",
+        "content": "<p>POI3 Das Leben kehrt zurück</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 583.88, -930.14, 4870.91 ],
+        "title": "Ortler",
+        "content": "<p>POI4 Der Gletscher im Dorf</p>",
         "size": 300,
         "offset": 100
       }
@@ -80,9 +144,33 @@
     "points": [
       {
         "img": "asset/icon/info.png",
-        "coords" : [ 2636.03, -678.18, -4183.14 ],
+        "coords" : [ 4956.75, 538.35, 201.23 ],
         "title": "Ortler",
-        "content": "<p>Das Gipfelkreuz am Ortler!</p>",
+        "content": "<p>POI0: Gletschertor am Suldengletscher</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 4503.05, 2137.31, 250.47 ],
+        "title": "Ortler",
+        "content": "<p>POI1 Der Gletscher bietet die Stirn</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 2596.02, -345.91, 4251.59 ],
+        "title": "Ortler",
+        "content": "<p>POI2 Toteis: Zum Schmelzen verurteilt</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ -3173.54, -1888.09, 3363.51 ],
+        "title": "Ortler",
+        "content": "<p>POI3 Moränenschutt</p>",
         "size": 300,
         "offset": 100
       }
@@ -107,9 +195,25 @@
     "points": [
       {
         "img": "asset/icon/info.png",
-        "coords" : [ 2636.03, -678.18, -4183.14 ],
+        "coords" : [ 1010.69, -2356.21, 4285.11 ],
         "title": "Ortler",
-        "content": "<p>Das Gipfelkreuz am Ortler!</p>",
+        "content": "<p>POI1 Oberer Ortlerferner</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 2632.44, -871.24, -4149.73 ],
+        "title": "Ortler",
+        "content": "<p>Ortlergipfel (3905 m)</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [-2712.42, -1344.03, 3968.30 ],
+        "title": "Ortler",
+        "content": "<p>POI2 Eiskernbohrung</p>",
         "size": 300,
         "offset": 100
       }
@@ -134,9 +238,33 @@
     "points": [
       {
         "img": "asset/icon/info.png",
-        "coords" : [ 2636.03, -678.18, -4183.14 ],
+        "coords" : [-4074.80, -813.13, -2769.01 ],
         "title": "Ortler",
-        "content": "<p>Das Gipfelkreuz am Ortler!</p>",
+        "content": "<p>POI1: Suldner Dreigestirn: Königsspitze, Monte Zebrù und Ortler</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ -4127.22, -2021.69, -1951.24 ],
+        "title": "Ortler",
+        "content": "<p>POI2 Skigebiet am Gletscherfuß</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 2334.72, 1031.30, -4289.81 ],
+        "title": "Ortler",
+        "content": "<p>POI3: Monte Cevedale</p>",
+        "size": 300,
+        "offset": 100
+      },
+      {
+        "img": "asset/icon/info.png",
+        "coords" : [ 3726.87, -3047.05, -1325.69 ],
+        "title": "Ortler",
+        "content": "<p>Madritschspitze (3265 m)</p>",
         "size": 300,
         "offset": 100
       }

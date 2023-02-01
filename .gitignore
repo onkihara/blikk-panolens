@@ -1,5 +1,6 @@
 node_modules
 bower_components
+panos
 .idea/*
 ./**.DS_Store
 coverage/
